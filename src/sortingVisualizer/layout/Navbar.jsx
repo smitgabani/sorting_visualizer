@@ -3,7 +3,7 @@ import React from 'react'
 const Navbar = () => {
   return (
     <div id="nav">
-       <span style={{display:"block"}}><span className="head">Sorting Visualizer</span>  by smitgabani</span>
+       <span style={{display:"block"}}><span className="head">Sorting Visualizer</span>  by sg</span>
     </div>
   )
 }
