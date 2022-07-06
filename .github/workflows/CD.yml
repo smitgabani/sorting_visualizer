@@ -1,0 +1,16 @@
+name: 'netlify cd'
+
+on:
+  push:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: 'Deploy to Netlify'
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ PXE7_LofxBQCwD0O7jNokHvlTj1Ir24xf4qjymYizPw }}
+          NETLIFY_DEPLOY_TO_PROD: true
