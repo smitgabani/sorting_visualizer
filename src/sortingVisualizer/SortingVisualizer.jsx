@@ -1,6 +1,6 @@
 import './sortingcss.css';
 import React from "react";
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { usePrimaryArray } from "../hooks/usePrimaryArray";
 import { useArrSize } from "../hooks/useArrSize";
 import { useAnimationSpeed } from '../hooks/useAnimationSpeed';
@@ -17,6 +17,7 @@ export default function SortingVisualizer(props) {
    const [algorithm, setAlgorithm] = useState('bubbleSort');
    const [animationSpeed, setAnimationSpeed] = useAnimationSpeed(DEFAULT_SPEED);
    const [disableOptions, setDisableOptions] = useState(false);
+   const containerRef = useRef(null);
 
    const bubbleSort = async () => {
      let currentArr = primaryArray;
@@ -68,7 +69,7 @@ export default function SortingVisualizer(props) {
    }
    const changeSize = (e) => {
      if (e.target.value > 10 && e.target.value < 100) {
-       setArrSize((arrSize) => e.target.value);
+       setArrSize(e.target.value);
        randomizeArray();
      }
    }
