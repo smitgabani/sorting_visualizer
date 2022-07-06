@@ -23,4 +23,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Deploy netlify
-        run: curl -X POST -d {} ${{ secrets.NETLIFY_DEPLOY }}
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/62c5efb39cca4710642a44a8
