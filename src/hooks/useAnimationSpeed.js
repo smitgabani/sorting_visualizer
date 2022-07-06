@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const useAnimationSpeed = (speed) => {
     const [animationSpeed, setAnimationSpeed] = useState(speed);

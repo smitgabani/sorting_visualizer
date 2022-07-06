@@ -1,6 +1,6 @@
 import './sortingcss.css';
 import React from "react";
-import { useState, useRef } from 'react';
+import { useState } from 'react';
 import { usePrimaryArray } from "../hooks/usePrimaryArray";
 import { useArrSize } from "../hooks/useArrSize";
 import { useAnimationSpeed } from '../hooks/useAnimationSpeed';
@@ -62,6 +62,8 @@ export default function SortingVisualizer(props) {
        case 'bubbleSort':
          bubbleSort()
          break
+        default:
+          bubbleSort()
      }
    }
    const changeSize = (e) => {

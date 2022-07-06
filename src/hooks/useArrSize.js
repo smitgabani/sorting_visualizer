@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export const useArrSize = (size) => {
     const [arrSize, setArrSize] = useState(size);

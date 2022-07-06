@@ -22,8 +22,8 @@ export const usePrimaryArray = (arrSize) => {
     }
 
     useEffect(() => {
-      randomizeArray();
-    }, []);
+
+    },[]);
 
     return [primaryArray, setPrimaryArray, randomizeArray]
 
